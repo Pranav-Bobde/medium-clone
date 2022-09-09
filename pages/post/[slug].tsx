@@ -192,12 +192,13 @@ function Post({ post }: Props) {
         <hr />
 
         {post.comments.map((comment) => {
-          <div key={comment._id}>
+          return (<div key={comment._id}>
             <p><span>
             {comment.name}:
               </span>{comment.comment}</p>
-          </div>
+          </div>)
         })}
+
       </div>
     </main>
   );
